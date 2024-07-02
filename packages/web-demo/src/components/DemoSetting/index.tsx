@@ -133,10 +133,10 @@ function DemoSetting(props: any) {
             switchChain(`${chain.name.toLowerCase()}-${chain.id}`);
         };
         // @ts-ignore
-        window.particle.auth.off('chainChanged', chainChanged);
+        window.particle.auth.on('chainChanged', chainChanged);
         return () => {
             // @ts-ignore
-            window.particle.auth.on('chainChanged', chainChanged);
+            window.particle.auth.off('chainChanged', chainChanged);
         };
     }, []);
 
