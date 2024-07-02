@@ -88,12 +88,17 @@ function Home() {
     useEffect(() => {
         if (loginState) {
             initAccount();
+        }
+    }, [loginState, demoSetting.chainKey, demoSetting.erc4337]);
+
+    useEffect(()=>{
+        if(loginState){
             window?.particle?.initWalletPlugin({
                 ethereumProvider: window?.particle?.particleProvider,
                 solanaProvider: window?.particle?.solanaWallet,
             });
         }
-    }, [loginState, demoSetting.chainKey, demoSetting.erc4337]);
+    },[loginState])
 
     const particle = useMemo(() => {
         const {
