@@ -2,7 +2,7 @@ import { WalletEntryPosition } from '@particle-network/auth';
 import {
     Avalanche,
     Ethereum,
-    EthereumGoerli,
+    EthereumSepolia,
     KCCTestnet,
     Moonbeam,
     Moonriver,
@@ -43,14 +43,14 @@ function MyApp({ Component, pageProps }: any) {
                     Avalanche,
                     Polygon,
                     Ethereum,
-                    EthereumGoerli,
+                    EthereumSepolia,
                     Solana,
                     KCCTestnet,
                 ],
                 particleWalletEntry: {
                     displayWalletEntry: true,
                     defaultWalletEntryPosition: WalletEntryPosition.BR,
-                    supportChains: [Ethereum, EthereumGoerli],
+                    supportChains: [Ethereum, EthereumSepolia],
                 },
                 wallets: [
                     ...evmWallets({

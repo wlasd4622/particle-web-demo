@@ -3,11 +3,11 @@ import './App.scss';
 import Page404 from './pages/404';
 import PageConnectKit from './pages/connectKit';
 import Home from './pages/index';
+import PageOther from './pages/other';
 import PageQrcode from './pages/qrcode';
 import PageRainbowKit from './pages/rainbowKit';
 import PageWeb3Modal from './pages/web3Modal';
 import PageWebRedirect from './pages/webRedirect';
-import PageOther from './pages/other';
 
 // TODO:set debug for internal test, developer must remove it.
 window.__PARTICLE_ENVIRONMENT__ = process.env.REACT_APP_PARTICLE_ENV;

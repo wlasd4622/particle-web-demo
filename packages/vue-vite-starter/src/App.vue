@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Ethereum, EthereumGoerli } from '@particle-network/chains';
+import { Ethereum, EthereumSepolia } from '@particle-network/chains';
 import { Chain, ConnectConfig, ParticleConnect, Provider, metaMask, walletconnect } from '@particle-network/connect';
 import { ref } from 'vue';
 
@@ -11,7 +11,7 @@ const config: ConnectConfig = {
     projectId: import.meta.env.VITE_APP_PROJECT_ID,
     clientKey: import.meta.env.VITE_APP_CLIENT_KEY,
     appId: import.meta.env.VITE_APP_APP_ID,
-    chains: [Ethereum as Chain, EthereumGoerli as Chain],
+    chains: [Ethereum as Chain, EthereumSepolia as Chain],
     wallets: [
         metaMask({ projectId: import.meta.env.VITE_APP_WALLETCONNECT_PROJECT_ID, showQrModal: false }),
         walletconnect({ projectId: import.meta.env.VITE_APP_WALLETCONNECT_PROJECT_ID, showQrModal: true }),

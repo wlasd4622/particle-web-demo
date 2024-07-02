@@ -1,4 +1,4 @@
-import { Ethereum, EthereumGoerli } from '@particle-network/chains';
+import { Ethereum, EthereumSepolia } from '@particle-network/chains';
 import {
     ParticleConnect,
     Provider,
@@ -24,7 +24,7 @@ function App() {
             projectId: process.env.REACT_APP_PROJECT_ID as string,
             clientKey: process.env.REACT_APP_CLIENT_KEY as string,
             appId: process.env.REACT_APP_APP_ID as string,
-            chains: [Ethereum, EthereumGoerli],
+            chains: [Ethereum, EthereumSepolia],
             wallets: [
                 metaMask({ projectId: process.env.REACT_APP_WALLETCONNECT_PROJECT_ID }),
                 rainbow({ projectId: process.env.REACT_APP_WALLETCONNECT_PROJECT_ID }),

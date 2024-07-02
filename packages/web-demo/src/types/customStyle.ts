@@ -1,5 +1,5 @@
 import { WalletCustomStyle } from '@particle-network/auth';
-import { BNBChain, BNBChainTestnet, Ethereum, EthereumGoerli } from '@particle-network/chains';
+import { BNBChain, BNBChainTestnet, Ethereum, EthereumSepolia } from '@particle-network/chains';
 
 export const customStyle: WalletCustomStyle = {
     supportAddToken: true, // whether to show import token，default true
@@ -10,8 +10,8 @@ export const customStyle: WalletCustomStyle = {
             name: Ethereum.name,
         },
         {
-            id: EthereumGoerli.id,
-            name: EthereumGoerli.name,
+            id: EthereumSepolia.id,
+            name: EthereumSepolia.name,
         },
         {
             id: BNBChain.id,

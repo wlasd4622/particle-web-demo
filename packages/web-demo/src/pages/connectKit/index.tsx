@@ -1,6 +1,5 @@
 import {
     Ethereum,
-    EthereumGoerli,
     EthereumSepolia,
     Solana,
     SolanaDevnet,
@@ -60,7 +59,7 @@ const PageConnectKit = () => {
                 projectId: process.env.REACT_APP_PROJECT_ID as string,
                 clientKey: process.env.REACT_APP_CLIENT_KEY as string,
                 appId: process.env.REACT_APP_APP_ID as string,
-                chains: [Ethereum, EthereumGoerli, EthereumSepolia, Solana, SolanaDevnet, SolanaTestnet],
+                chains: [Ethereum, EthereumSepolia, Solana, SolanaDevnet, SolanaTestnet],
                 particleWalletEntry: {
                     displayWalletEntry: true,
                     defaultWalletEntryPosition: WalletEntryPosition.BR,
