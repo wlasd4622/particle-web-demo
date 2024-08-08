@@ -12,3 +12,4 @@ coverage
 /.history
 .ossutil_checkpoint
 .vscode
+.vercel

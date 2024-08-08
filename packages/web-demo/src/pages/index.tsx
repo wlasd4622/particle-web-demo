@@ -91,14 +91,12 @@ function Home() {
         }
     }, [loginState, demoSetting.chainKey, demoSetting.erc4337]);
 
-    useEffect(()=>{
-        if(loginState){
-            window?.particle?.initWalletPlugin({
-                ethereumProvider: window?.particle?.particleProvider,
-                solanaProvider: window?.particle?.solanaWallet,
-            });
-        }
-    },[loginState])
+    useEffect(() => {
+        window?.particle?.initWalletPlugin({
+            ethereumProvider: window?.particle?.particleProvider,
+            solanaProvider: window?.particle?.solanaWallet,
+        });
+    }, []);
 
     const particle = useMemo(() => {
         const {
@@ -122,7 +120,6 @@ function Home() {
         if (window.particle) {
             window.particle.auth.off('chainChanged', chainChanged);
             window.particle.auth.off('disconnect', disconnect);
-            window.particle.walletEntryDestroy();
         }
         const chainKey = localStorage.getItem('dapp_particle_chain_key') || 'ethereum-1';
         const chain = ParticleChains[chainKey];

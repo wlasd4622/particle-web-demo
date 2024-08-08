@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const { codeInspectorPlugin } = require('code-inspector-plugin');
 
 module.exports = function override(config, env) {
     //do stuff with the webpack config...
@@ -35,6 +36,13 @@ module.exports = function override(config, env) {
             drop_debugger: true,
             pure_funcs: ['console.log', 'console.table'],
         };
+    } else {
+        config.plugins.push(
+            codeInspectorPlugin({
+                bundler: 'webpack',
+                editor: 'code',
+            })
+        );
     }
 
     config.module.rules.push({
